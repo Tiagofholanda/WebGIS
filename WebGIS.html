@@ -6,15 +6,16 @@
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
-        <link rel="stylesheet" href="css/L.Control.Locate.min.css">
-        <link rel="stylesheet" href="css/qgis2web.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/leaflet-search.css">
-        <link rel="stylesheet" href="css/filter.css">
-<link rel="stylesheet" href="css/nouislider.min.css">
-        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <!-- Substitua "https://example.com" pelo seu domínio onde os arquivos estão hospedados -->
+        <link rel="stylesheet" href="https://example.com/css/leaflet.css">
+        <link rel="stylesheet" href="https://example.com/css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="https://example.com/css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="https://example.com/css/qgis2web.css">
+        <link rel="stylesheet" href="https://example.com/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="https://example.com/css/leaflet-search.css">
+        <link rel="stylesheet" href="https://example.com/css/filter.css">
+        <link rel="stylesheet" href="https://example.com/css/nouislider.min.css">
+        <link rel="stylesheet" href="https://example.com/css/leaflet-measure.css">
         <style>
         html, body, #map {
             width: 100%;
@@ -28,25 +29,25 @@
     <body>
         <div id="map">
         </div>
-        <script src="js/qgis2web_expressions.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/L.Control.Layers.Tree.min.js"></script>
-        <script src="js/L.Control.Locate.min.js"></script>
-        <script src="js/leaflet.rotatedMarker.js"></script>
-        <script src="js/leaflet.pattern.js"></script>
-        <script src="js/leaflet-hash.js"></script>
-        <script src="js/Autolinker.min.js"></script>
-        <script src="js/rbush.min.js"></script>
-        <script src="js/labelgun.min.js"></script>
-        <script src="js/labels.js"></script>
-        <script src="js/leaflet-measure.js"></script>
-        <script src="js/leaflet-search.js"></script>
-        <script src="js/tailDT.js"></script>
-<script src="js/nouislider.min.js"></script>
-<script src="js/wNumb.js"></script>
-        <script src="data/imvel_2.js"></script>
-        <script src="data/Area_Alagadas_3.js"></script>
-        <script src="data/PROPRIEDADES_4.js"></script>
+        <script src="https://example.com/js/qgis2web_expressions.js"></script>
+        <script src="https://example.com/js/leaflet.js"></script>
+        <script src="https://example.com/js/L.Control.Layers.Tree.min.js"></script>
+        <script src="https://example.com/js/L.Control.Locate.min.js"></script>
+        <script src="https://example.com/js/leaflet.rotatedMarker.js"></script>
+        <script src="https://example.com/js/leaflet.pattern.js"></script>
+        <script src="https://example.com/js/leaflet-hash.js"></script>
+        <script src="https://example.com/js/Autolinker.min.js"></script>
+        <script src="https://example.com/js/rbush.min.js"></script>
+        <script src="https://example.com/js/labelgun.min.js"></script>
+        <script src="https://example.com/js/labels.js"></script>
+        <script src="https://example.com/js/leaflet-measure.js"></script>
+        <script src="https://example.com/js/leaflet-search.js"></script>
+        <script src="https://example.com/js/tailDT.js"></script>
+        <script src="https://example.com/js/nouislider.min.js"></script>
+        <script src="https://example.com/js/wNumb.js"></script>
+        <script src="https://example.com/data/imvel_2.js"></script>
+        <script src="https://example.com/data/Area_Alagadas_3.js"></script>
+        <script src="https://example.com/data/PROPRIEDADES_4.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
@@ -69,19 +70,19 @@
          return tempDiv.innerHTML;
         }
         // add class to format popup if it contains media
-		function addClassToPopupIfMedia(content, popup) {
-			var tempDiv = document.createElement('div');
-			tempDiv.innerHTML = content;
-			if (tempDiv.querySelector('td img')) {
-				popup._contentNode.classList.add('media');
-					// Delay to force the redraw
-					setTimeout(function() {
-						popup.update();
-					}, 10);
-			} else {
-				popup._contentNode.classList.remove('media');
-			}
-		}
+        function addClassToPopupIfMedia(content, popup) {
+            var tempDiv = document.createElement('div');
+            tempDiv.innerHTML = content;
+            if (tempDiv.querySelector('td img')) {
+                popup._contentNode.classList.add('media');
+                    // Delay to force the redraw
+                    setTimeout(function() {
+                        popup.update();
+                    }, 10);
+            } else {
+                popup._contentNode.classList.remove('media');
+            }
+        }
         var zoomControl = L.control.zoom({
             position: 'topleft'
         }).addTo(map);
@@ -145,10 +146,10 @@
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
+            layer.on('popupopen', function(e) {
+                addClassToPopupIfMedia(content, e.popup);
+            });
+            layer.bindPopup(content, { maxHeight: 400 });
         }
 
         function style_imvel_2_0() {
@@ -208,10 +209,10 @@
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
+            layer.on('popupopen', function(e) {
+                addClassToPopupIfMedia(content, e.popup);
+            });
+            layer.bindPopup(content, { maxHeight: 400 });
         }
 
         function style_Area_Alagadas_3_0(feature) {
@@ -483,10 +484,10 @@
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
+            layer.on('popupopen', function(e) {
+                addClassToPopupIfMedia(content, e.popup);
+            });
+            layer.bindPopup(content, { maxHeight: 400 });
         }
 
         function style_PROPRIEDADES_4_0() {
@@ -527,9 +528,9 @@
         map.addLayer(layer_PROPRIEDADES_4);
         var baseMaps = {};
         var overlaysTree = [
-            {label: '<img src="legend/PROPRIEDADES_4.png" /> PROPRIEDADES', layer: layer_PROPRIEDADES_4},
-            {label: 'Area_Alagadas<br /><table><tr><td style="text-align: center;"><img src="legend/Area_Alagadas_3_CAPIMAÇU0.png" /></td><td>CAPIM AÇU</td></tr><tr><td style="text-align: center;"><img src="legend/Area_Alagadas_3_MATA1.png" /></td><td>MATA</td></tr><tr><td style="text-align: center;"><img src="legend/Area_Alagadas_3_MILHO2.png" /></td><td>MILHO</td></tr><tr><td style="text-align: center;"><img src="legend/Area_Alagadas_3_PASTAGEM3.png" /></td><td>PASTAGEM</td></tr><tr><td style="text-align: center;"><img src="legend/Area_Alagadas_3_RESIDÊNCIA4.png" /></td><td>RESIDÊNCIA</td></tr></table>', layer: layer_Area_Alagadas_3},
-            {label: '<img src="legend/imvel_2.png" /> imóvel', layer: layer_imvel_2},
+            {label: '<img src="https://example.com/legend/PROPRIEDADES_4.png" /> PROPRIEDADES', layer: layer_PROPRIEDADES_4},
+            {label: 'Area_Alagadas<br /><table><tr><td style="text-align: center;"><img src="https://example.com/legend/Area_Alagadas_3_CAPIMAÇU0.png" /></td><td>CAPIM AÇU</td></tr><tr><td style="text-align: center;"><img src="https://example.com/legend/Area_Alagadas_3_MATA1.png" /></td><td>MATA</td></tr><tr><td style="text-align: center;"><img src="https://example.com/legend/Area_Alagadas_3_MILHO2.png" /></td><td>MILHO</td></tr><tr><td style="text-align: center;"><img src="https://example.com/legend/Area_Alagadas_3_PASTAGEM3.png" /></td><td>PASTAGEM</td></tr><tr><td style="text-align: center;"><img src="https://example.com/legend/Area_Alagadas_3_RESIDÊNCIA4.png" /></td><td>RESIDÊNCIA</td></tr></table>', layer: layer_Area_Alagadas_3},
+            {label: '<img src="https://example.com/legend/imvel_2.png" /> imóvel', layer: layer_imvel_2},
             {label: "Google Maps", layer: layer_GoogleMaps_1},
             {label: "Google Satellite", layer: layer_GoogleSatellite_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
